@@ -151,6 +151,7 @@
             this.checkBox_fanta.TabIndex = 54;
             this.checkBox_fanta.Text = "fanta";
             this.checkBox_fanta.UseVisualStyleBackColor = true;
+            this.checkBox_fanta.CheckedChanged += new System.EventHandler(this.checkBox_fanta_CheckedChanged_1);
             // 
             // textBox_kola2
             // 
@@ -160,6 +161,7 @@
             this.textBox_kola2.Name = "textBox_kola2";
             this.textBox_kola2.Size = new System.Drawing.Size(114, 40);
             this.textBox_kola2.TabIndex = 53;
+            this.textBox_kola2.TextChanged += new System.EventHandler(this.textBox_kola2_TextChanged_1);
             // 
             // textBox_pizza2
             // 
@@ -169,6 +171,7 @@
             this.textBox_pizza2.Name = "textBox_pizza2";
             this.textBox_pizza2.Size = new System.Drawing.Size(114, 40);
             this.textBox_pizza2.TabIndex = 52;
+            this.textBox_pizza2.TextChanged += new System.EventHandler(this.textBox_pizza2_TextChanged_1);
             // 
             // textBox_hamburger2
             // 
@@ -178,6 +181,7 @@
             this.textBox_hamburger2.Name = "textBox_hamburger2";
             this.textBox_hamburger2.Size = new System.Drawing.Size(114, 40);
             this.textBox_hamburger2.TabIndex = 51;
+            this.textBox_hamburger2.TextChanged += new System.EventHandler(this.textBox_hamburger2_TextChanged_1);
             // 
             // textBox_sendvic2
             // 
@@ -187,6 +191,7 @@
             this.textBox_sendvic2.Name = "textBox_sendvic2";
             this.textBox_sendvic2.Size = new System.Drawing.Size(114, 40);
             this.textBox_sendvic2.TabIndex = 50;
+            this.textBox_sendvic2.TextChanged += new System.EventHandler(this.textBox_sendvic2_TextChanged_1);
             // 
             // textBox_kola
             // 
@@ -234,6 +239,7 @@
             this.checkBox_kola.TabIndex = 45;
             this.checkBox_kola.Text = "koka-kola";
             this.checkBox_kola.UseVisualStyleBackColor = true;
+            this.checkBox_kola.CheckedChanged += new System.EventHandler(this.checkBox_kola_CheckedChanged);
             // 
             // checkBox_pizza
             // 
@@ -245,6 +251,7 @@
             this.checkBox_pizza.TabIndex = 44;
             this.checkBox_pizza.Text = "pizza";
             this.checkBox_pizza.UseVisualStyleBackColor = true;
+            this.checkBox_pizza.CheckedChanged += new System.EventHandler(this.checkBox_pizza_CheckedChanged_1);
             // 
             // checkBox_hamburger
             // 
@@ -256,6 +263,7 @@
             this.checkBox_hamburger.TabIndex = 43;
             this.checkBox_hamburger.Text = "hamburger";
             this.checkBox_hamburger.UseVisualStyleBackColor = true;
+            this.checkBox_hamburger.CheckedChanged += new System.EventHandler(this.checkBox_hamburger_CheckedChanged_1);
             // 
             // checkBox_sendvic
             // 
@@ -267,6 +275,7 @@
             this.checkBox_sendvic.TabIndex = 42;
             this.checkBox_sendvic.Text = "sendvic";
             this.checkBox_sendvic.UseVisualStyleBackColor = true;
+            this.checkBox_sendvic.CheckedChanged += new System.EventHandler(this.checkBox_sendvic_CheckedChanged_1);
             // 
             // textBox_qiymet
             // 
@@ -326,6 +335,7 @@
             this.radioButton_manat.TabStop = true;
             this.radioButton_manat.Text = "Manat";
             this.radioButton_manat.UseVisualStyleBackColor = true;
+            this.radioButton_manat.CheckedChanged += new System.EventHandler(this.radioButton_manat_CheckedChanged_1);
             // 
             // radioButton_litr
             // 
@@ -374,6 +384,7 @@
             this.combo_benzinler.Name = "combo_benzinler";
             this.combo_benzinler.Size = new System.Drawing.Size(121, 39);
             this.combo_benzinler.TabIndex = 32;
+            this.combo_benzinler.SelectedIndexChanged += new System.EventHandler(this.combo_benzinler_SelectedIndexChanged_1);
             // 
             // MainView
             // 
