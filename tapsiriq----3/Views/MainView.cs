@@ -9,16 +9,51 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tapsiriq____3
+namespace tapsiriq____3.Views
 {
-    public partial class Form1 : Form
+    public partial class MainView : Form,IMainView 
     {
-
-        public Form1()
+        public MainView()
         {
             InitializeComponent();
-           
+        }
 
+        public EventHandler<EventArgs> BuyEventHandler { get; set; }
+        public string Benzinqiymeti { get =>textBox_qiymet.Text; set => textBox_qiymet.Text=value; }
+        public string Litr { get =>    textBox_litr.Text  ; set => textBox_litr.Text    =value    ; }
+        public string Manat { get =>    textBox_manat.Text  ; set => textBox_manat.Text    =value    ; }
+        public string Sendvicqiymet { get =>    textBox_sendvic.Text  ; set =>textBox_sendvic.Text  =value     ; }
+        public string Hamburgerqiymet { get =>   textBox_hamburger.Text; set =>textBox_hamburger.Text =value  ; }
+        public string Pizzaqiymet { get =>textBox_pizza.Text  ; set =>textBox_pizza.Text    =value  ; }
+        public string Kokakolaqiymet { get =>    textBox_kola.Text    ; set =>     textBox_kola.Text    =value   ; }
+        public string Fantaqiymet { get =>textBox_fanta.Text  ; set => textBox_fanta.Text    =value ; }
+        public string Sendvicqiymetsay { get =>  textBox_sendvic2.Text ; set =>textBox_sendvic2.Text  =value  ; }
+        public string Hamburgerqiymetsay { get => textBox_hamburger2.Text ; set =>    textBox_hamburger2.Text=value    ; }
+        public string Pizzaqiymetsay { get =>    textBox_pizza2.Text; set =>  textBox_pizza2.Text   =value; }
+        public string Kokakolaqiymetsay { get =>  textBox_kola2.Text   ; set => textBox_kola2.Text = value; }
+        public string Fantaqiymetsay { get => textBox_fanta2.Text; set => textBox_fanta2.Text=value; }
+  
+        public List<string> combo_benzinler1 {  set => new List<string> { "92","95"}; }
+        public EventHandler<EventArgs> radiobuttonlitrEventHandler { get ; set; }
+        public EventHandler<EventArgs> radiobuttonmanatEventHandler { get; set; }
+        public string benzinumumiqiymet { get =>label_umumibenzinqiymeti.Text; set => label_umumibenzinqiymeti.Text=value; }
+   
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BuyEventHandler.Invoke(sender,e);
+        }
+
+        private void radioButton_litr_CheckedChanged(object sender, EventArgs e)
+        {
+            radiobuttonlitrEventHandler.Invoke(sender, e);
+        }
+        private void button1_click(object sender, EventArgs e)
+        {
+            if (label_umumibenzinqiymeti != null)
+            {
+                simpleSound.Play();
+            }
         }
         SoundPlayer simpleSound = new SoundPlayer("Para sesi para kasası sesi (320 kbps).wav");
         double sandvic = 0;
@@ -30,7 +65,7 @@ namespace tapsiriq____3
         double kafe = 0;
         private void combo_benzinler_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
 
 
 
@@ -41,21 +76,11 @@ namespace tapsiriq____3
             else if (combo_benzinler.SelectedItem as string == "A-95") textBox_qiymet.Text = "0.80";
         }
 
-        private void radioButton_litr_CheckedChanged(object sender, EventArgs e)
-        {
-            label_umumibenzinqiymeti.Text = "0";
-            textBox_manat.Text = null;
-            if (radioButton_litr.Checked == true)
-            {
-                textBox_manat.Enabled = false;
-                textBox_litr.Enabled = true;
-            }
-            
-        }
+      
 
         private void radioButton_manat_CheckedChanged(object sender, EventArgs e)
         {
-           
+
             label_umumibenzinqiymeti.Text = "0";
             textBox_litr.Text = null;
             if (radioButton_manat.Checked == true)
@@ -64,23 +89,23 @@ namespace tapsiriq____3
                 textBox_manat.Enabled = true;
 
             }
-        
+
         }
 
         private void textBox_litr_TextChanged(object sender, EventArgs e)
         {
-          
+
             if (string.IsNullOrWhiteSpace(textBox_litr.Text) == true)
             {
                 label_umumibenzinqiymeti.Text = "0";
             }
-      
 
-            if ( radioButton_litr.Checked == true && !string.IsNullOrWhiteSpace(textBox_litr.Text))
+
+            if (radioButton_litr.Checked == true && !string.IsNullOrWhiteSpace(textBox_litr.Text))
             {
 
                 benzinqiymeti = (Convert.ToDouble(textBox_qiymet.Text) * Convert.ToDouble(textBox_litr.Text));
-                label_umumibenzinqiymeti.Text =benzinqiymeti.ToString();
+                label_umumibenzinqiymeti.Text = benzinqiymeti.ToString();
             }
         }
 
@@ -103,7 +128,7 @@ namespace tapsiriq____3
                 textBox_sendvic2.Enabled = false;
                 textBox_sendvic2.Text = null;
             }
-           
+
         }
 
         private void checkBox_hamburger_CheckedChanged(object sender, EventArgs e)
@@ -134,7 +159,7 @@ namespace tapsiriq____3
             else
             {
                 textBox_kola2.Enabled = false;
-                textBox_kola2.Text =null ;
+                textBox_kola2.Text = null;
             }
 
         }
@@ -164,7 +189,7 @@ namespace tapsiriq____3
                 sandvic = 0;
                 label_kafe.Text = (sandvic + hamburger + pizza + kola + fanta).ToString();
             }
-            
+
         }
 
         private void textBox_hamburger2_TextChanged(object sender, EventArgs e)
@@ -177,10 +202,10 @@ namespace tapsiriq____3
             else
             {
                 hamburger = 0;
-            
+
                 label_kafe.Text = (sandvic + hamburger + pizza + kola + fanta).ToString();
             }
-           
+
         }
 
         private void textBox_pizza2_TextChanged(object sender, EventArgs e)
@@ -196,7 +221,7 @@ namespace tapsiriq____3
 
                 label_kafe.Text = (sandvic + hamburger + pizza + kola + fanta).ToString();
             }
-           
+
         }
 
         private void textBox_kola2_TextChanged(object sender, EventArgs e)
@@ -227,18 +252,10 @@ namespace tapsiriq____3
 
                 label_kafe.Text = (sandvic + hamburger + pizza + kola + fanta).ToString();
             }
-            
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(label_umumibenzinqiymeti!=null)
-            {
-                simpleSound.Play();
-            }
 
-   
-        }
 
         private void label_umumibenzinqiymeti_TextChanged(object sender, EventArgs e)
         {
@@ -252,6 +269,6 @@ namespace tapsiriq____3
             umumi.Text = (kafe + benzinqiymeti).ToString(); ;
         }
 
-      
     }
 }
+
