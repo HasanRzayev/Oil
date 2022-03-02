@@ -43,10 +43,7 @@ namespace tapsiriq____3.Views
 
         private void button1_click(object sender, EventArgs e)
         {
-            if (label_umumibenzinqiymeti != null)
-            {
-                simpleSound.Play();
-            }
+           
         }
         SoundPlayer simpleSound = new SoundPlayer("Para sesi para kasası sesi (320 kbps).wav");
         double sandvic = 0;
@@ -242,7 +239,10 @@ namespace tapsiriq____3.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (label_umumibenzinqiymeti != null)
+            {
+                //simpleSound.Play();
+            }
         }
 
         private void label_umumibenzinqiymeti_Click(object sender, EventArgs e)
