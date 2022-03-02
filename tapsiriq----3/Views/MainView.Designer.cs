@@ -122,6 +122,7 @@
             this.label_kafe.Size = new System.Drawing.Size(98, 108);
             this.label_kafe.TabIndex = 57;
             this.label_kafe.Text = "0";
+            this.label_kafe.Click += new System.EventHandler(this.label_kafe_Click);
             // 
             // textBox_fanta2
             // 
@@ -131,6 +132,7 @@
             this.textBox_fanta2.Name = "textBox_fanta2";
             this.textBox_fanta2.Size = new System.Drawing.Size(114, 40);
             this.textBox_fanta2.TabIndex = 56;
+            this.textBox_fanta2.TextChanged += new System.EventHandler(this.textBox_fanta2_TextChanged);
             // 
             // textBox_fanta
             // 
@@ -151,7 +153,7 @@
             this.checkBox_fanta.TabIndex = 54;
             this.checkBox_fanta.Text = "fanta";
             this.checkBox_fanta.UseVisualStyleBackColor = true;
-            this.checkBox_fanta.CheckedChanged += new System.EventHandler(this.checkBox_fanta_CheckedChanged_1);
+            this.checkBox_fanta.CheckedChanged += new System.EventHandler(this.checkBox_fanta_CheckedChanged);
             // 
             // textBox_kola2
             // 
@@ -161,7 +163,7 @@
             this.textBox_kola2.Name = "textBox_kola2";
             this.textBox_kola2.Size = new System.Drawing.Size(114, 40);
             this.textBox_kola2.TabIndex = 53;
-            this.textBox_kola2.TextChanged += new System.EventHandler(this.textBox_kola2_TextChanged_1);
+            this.textBox_kola2.TextChanged += new System.EventHandler(this.textBox_kola2_TextChanged);
             // 
             // textBox_pizza2
             // 
@@ -171,7 +173,7 @@
             this.textBox_pizza2.Name = "textBox_pizza2";
             this.textBox_pizza2.Size = new System.Drawing.Size(114, 40);
             this.textBox_pizza2.TabIndex = 52;
-            this.textBox_pizza2.TextChanged += new System.EventHandler(this.textBox_pizza2_TextChanged_1);
+            this.textBox_pizza2.TextChanged += new System.EventHandler(this.textBox_pizza2_TextChanged);
             // 
             // textBox_hamburger2
             // 
@@ -181,7 +183,7 @@
             this.textBox_hamburger2.Name = "textBox_hamburger2";
             this.textBox_hamburger2.Size = new System.Drawing.Size(114, 40);
             this.textBox_hamburger2.TabIndex = 51;
-            this.textBox_hamburger2.TextChanged += new System.EventHandler(this.textBox_hamburger2_TextChanged_1);
+            this.textBox_hamburger2.TextChanged += new System.EventHandler(this.textBox_hamburger2_TextChanged);
             // 
             // textBox_sendvic2
             // 
@@ -191,7 +193,7 @@
             this.textBox_sendvic2.Name = "textBox_sendvic2";
             this.textBox_sendvic2.Size = new System.Drawing.Size(114, 40);
             this.textBox_sendvic2.TabIndex = 50;
-            this.textBox_sendvic2.TextChanged += new System.EventHandler(this.textBox_sendvic2_TextChanged_1);
+            this.textBox_sendvic2.TextChanged += new System.EventHandler(this.textBox_sendvic2_TextChanged);
             // 
             // textBox_kola
             // 
@@ -251,7 +253,7 @@
             this.checkBox_pizza.TabIndex = 44;
             this.checkBox_pizza.Text = "pizza";
             this.checkBox_pizza.UseVisualStyleBackColor = true;
-            this.checkBox_pizza.CheckedChanged += new System.EventHandler(this.checkBox_pizza_CheckedChanged_1);
+            this.checkBox_pizza.CheckedChanged += new System.EventHandler(this.checkBox_pizza_CheckedChanged);
             // 
             // checkBox_hamburger
             // 
@@ -263,7 +265,7 @@
             this.checkBox_hamburger.TabIndex = 43;
             this.checkBox_hamburger.Text = "hamburger";
             this.checkBox_hamburger.UseVisualStyleBackColor = true;
-            this.checkBox_hamburger.CheckedChanged += new System.EventHandler(this.checkBox_hamburger_CheckedChanged_1);
+            this.checkBox_hamburger.CheckedChanged += new System.EventHandler(this.checkBox_hamburger_CheckedChanged);
             // 
             // checkBox_sendvic
             // 
@@ -275,7 +277,7 @@
             this.checkBox_sendvic.TabIndex = 42;
             this.checkBox_sendvic.Text = "sendvic";
             this.checkBox_sendvic.UseVisualStyleBackColor = true;
-            this.checkBox_sendvic.CheckedChanged += new System.EventHandler(this.checkBox_sendvic_CheckedChanged_1);
+            this.checkBox_sendvic.CheckedChanged += new System.EventHandler(this.checkBox_sendvic_CheckedChanged);
             // 
             // textBox_qiymet
             // 
@@ -305,6 +307,7 @@
             this.label_umumibenzinqiymeti.Size = new System.Drawing.Size(98, 108);
             this.label_umumibenzinqiymeti.TabIndex = 39;
             this.label_umumibenzinqiymeti.Text = "0";
+            this.label_umumibenzinqiymeti.Click += new System.EventHandler(this.label_umumibenzinqiymeti_Click);
             // 
             // textBox_manat
             // 
@@ -314,6 +317,7 @@
             this.textBox_manat.Name = "textBox_manat";
             this.textBox_manat.Size = new System.Drawing.Size(100, 35);
             this.textBox_manat.TabIndex = 38;
+            this.textBox_manat.TextChanged += new System.EventHandler(this.textBox_manat_TextChanged);
             // 
             // textBox_litr
             // 
@@ -323,6 +327,7 @@
             this.textBox_litr.Name = "textBox_litr";
             this.textBox_litr.Size = new System.Drawing.Size(100, 35);
             this.textBox_litr.TabIndex = 37;
+            this.textBox_litr.TextChanged += new System.EventHandler(this.textBox_litr_TextChanged);
             // 
             // radioButton_manat
             // 
@@ -335,7 +340,7 @@
             this.radioButton_manat.TabStop = true;
             this.radioButton_manat.Text = "Manat";
             this.radioButton_manat.UseVisualStyleBackColor = true;
-            this.radioButton_manat.CheckedChanged += new System.EventHandler(this.radioButton_manat_CheckedChanged_1);
+            this.radioButton_manat.CheckedChanged += new System.EventHandler(this.radioButton_manat_CheckedChanged);
             // 
             // radioButton_litr
             // 
@@ -384,7 +389,7 @@
             this.combo_benzinler.Name = "combo_benzinler";
             this.combo_benzinler.Size = new System.Drawing.Size(121, 39);
             this.combo_benzinler.TabIndex = 32;
-            this.combo_benzinler.SelectedIndexChanged += new System.EventHandler(this.combo_benzinler_SelectedIndexChanged_1);
+            this.combo_benzinler.SelectedIndexChanged += new System.EventHandler(this.combo_benzinler_SelectedIndexChanged);
             // 
             // MainView
             // 
