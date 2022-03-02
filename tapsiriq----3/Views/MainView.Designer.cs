@@ -30,7 +30,6 @@
         {
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.umumi = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label_kafe = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.combo_benzinler = new System.Windows.Forms.ComboBox();
+            this.umumi = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
@@ -80,16 +80,6 @@
             this.label5.Size = new System.Drawing.Size(215, 29);
             this.label5.TabIndex = 61;
             this.label5.Text = "Yanacaq doldurma";
-            // 
-            // umumi
-            // 
-            this.umumi.AutoSize = true;
-            this.umumi.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.umumi.Location = new System.Drawing.Point(516, 587);
-            this.umumi.Name = "umumi";
-            this.umumi.Size = new System.Drawing.Size(98, 108);
-            this.umumi.TabIndex = 60;
-            this.umumi.Text = "0";
             // 
             // button1
             // 
@@ -391,14 +381,25 @@
             this.combo_benzinler.TabIndex = 32;
             this.combo_benzinler.SelectedIndexChanged += new System.EventHandler(this.combo_benzinler_SelectedIndexChanged);
             // 
+            // umumi
+            // 
+            this.umumi.AutoSize = true;
+            this.umumi.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.umumi.Location = new System.Drawing.Point(516, 588);
+            this.umumi.Name = "umumi";
+            this.umumi.Size = new System.Drawing.Size(98, 108);
+            this.umumi.TabIndex = 63;
+            this.umumi.Text = "0";
+            this.umumi.Click += new System.EventHandler(this.umumi_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 749);
+            this.ClientSize = new System.Drawing.Size(924, 749);
+            this.Controls.Add(this.umumi);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.umumi);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label_kafe);
@@ -438,7 +439,6 @@
 
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label umumi;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label_kafe;
@@ -467,5 +467,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox combo_benzinler;
+        private System.Windows.Forms.Label umumi;
     }
 }

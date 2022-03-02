@@ -41,10 +41,7 @@ namespace tapsiriq____3.Views
 
 
 
-        private void button1_click(object sender, EventArgs e)
-        {
-           
-        }
+      
         SoundPlayer simpleSound = new SoundPlayer("Para sesi para kasası sesi (320 kbps).wav");
         double sandvic = 0;
         double hamburger = 0;
@@ -241,7 +238,7 @@ namespace tapsiriq____3.Views
         {
             if (label_umumibenzinqiymeti != null)
             {
-                //simpleSound.Play();
+                simpleSound.Play();
             }
         }
 
@@ -255,6 +252,11 @@ namespace tapsiriq____3.Views
         {
             kafe = double.Parse(label_kafe.Text);
             umumi.Text = (kafe + benzinqiymeti).ToString(); ;
+        }
+
+        private void umumi_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
